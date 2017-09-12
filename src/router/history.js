@@ -2,7 +2,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 import createHashHistory from 'history/createHashHistory'
 import createMemoryHistory from 'history/createMemoryHistory'
 
-import {options} from './defaults'
+import {options} from '../defaults'
 
 let history
 

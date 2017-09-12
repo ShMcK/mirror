@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import {ConnectedRouter, routerActions} from 'react-router-redux'
 
 import getHistory from './history'
-import {options} from './defaults'
-import {dispatch} from './middleware'
-import {actions} from './actions'
+import {options} from '../defaults'
+import {dispatch} from '../middleware'
+import {actions} from '../actions'
 
 export default function Router({history = getHistory(), children}) {
 
