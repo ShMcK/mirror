@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Link} from 'mirrorx'
+import {Route, Link} from 'mirror-router'
 
 import Topic from '../components/Topic'
 import AddTopic from '../components/AddTopic'

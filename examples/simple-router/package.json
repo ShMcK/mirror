@@ -7,7 +7,8 @@
     "build": "cross-env NODE_ENV=production webpack -p"
   },
   "dependencies": {
-    "mirrorx": "^0.2.0",
+    "mirrorx": "file:../..",
+    "mirror-router": "file:../../packages/mirror-router",
     "prop-types": "^15.5.10",
     "react": "^15.0.0",
     "react-dom": "^15.0.0"

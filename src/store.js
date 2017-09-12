@@ -4,17 +4,17 @@ import {
   combineReducers,
   compose
 } from 'redux'
-import {routerMiddleware, routerReducer} from 'react-router-redux'
 
+import {options} from './defaults'
 import createMiddleware from './middleware'
-import getHistory from './router/history'
+import {createRouterMiddleware, routerReducer} from 'mirror-router'
 
 export let store
 
 export function createStore(models, initialState, middlewares = []) {
 
   const middleware = applyMiddleware(
-    routerMiddleware(getHistory()),
+    createRouterMiddleware(options),
     ...middlewares,
     createMiddleware()
   )

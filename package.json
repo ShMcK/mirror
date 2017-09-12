@@ -9,7 +9,9 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "eslint src test",
     "build": "rm -rf lib && babel src -d lib --no-comments",
-    "bundle": "webpack && webpack -p --output-filename mirror.min.js"
+    "postbuild": "cd packages/mirror-router && npm run build && cd ../..",
+    "bundle": "webpack && webpack -p --output-filename mirror.min.js",
+    "postbundle": "cd packages/mirror-router && npm run bundle && cd ../.."
   },
   "main": "./lib/index.js",
   "keywords": [
@@ -27,13 +29,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "history": "^4.6.1",
     "prop-types": "^15.5.10",
     "react-redux": "^5.0.0",
-    "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1",
-    "react-router-redux": "^5.0.0-alpha.6",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "mirror-router": "file:./packages/mirror-router"
   },
   "peerDependencies": {
     "react": "^15.0.0",

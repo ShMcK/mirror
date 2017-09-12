@@ -1,7 +1,11 @@
 import {dispatch} from './middleware'
 import {options} from './defaults'
+import {addRouterActions} from 'mirror-router'
 
 const SEP = '/'
+
+// TODO: replace with option
+const hasRouter = true
 
 export const actions = {}
 
@@ -16,6 +20,10 @@ export function addActions(modelName, reducers = {}, effects = {}) {
     // and also the `data` param of corresponding method defined in model.reducers.
     actions[modelName][actionName] = actionCreator(modelName, actionName)
   })
+
+  if (hasRouter) {
+    addRouterActions({ actions, dispatch })
+  }
 
   each(effects, effectName => {
     if (actions[modelName][effectName]) {

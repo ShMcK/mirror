@@ -1,0 +1,48 @@
+{
+  "name": "mirror-router",
+  "version": "0.1.0",
+  "description": "Router package for Mirror.js",
+  "keywords": [
+    "mirror",
+    "react-router"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint src test",
+    "build": "rm -rf lib && babel src -d lib --no-comments",
+    "bundle": "webpack && webpack -p --output-filename mirror-router.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "history": "^4.7.2",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.6"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.1",
+    "babel-core": "^6.14.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.14.1",
+    "babel-preset-react": "^6.14.1",
+    "babel-preset-stage-2": "^6.14.1",
+    "coveralls": "^2.13.1",
+    "eslint": "^4.0.0",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^20.0.4",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "webpack": "^3.4.0"
+  },
+  "files": [
+    "lib/",
+    "LICENSE"
+  ]
+}

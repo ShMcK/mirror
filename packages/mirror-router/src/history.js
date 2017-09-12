@@ -2,11 +2,9 @@ import createBrowserHistory from 'history/createBrowserHistory'
 import createHashHistory from 'history/createHashHistory'
 import createMemoryHistory from 'history/createMemoryHistory'
 
-import {options} from '../defaults'
-
 let history
 
-export default function getHistory() {
+export default function getHistory(options = { historyMode: 'browser' }) {
 
   if (history) {
     return history
