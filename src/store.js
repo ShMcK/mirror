@@ -7,7 +7,7 @@ import {
 import {routerMiddleware, routerReducer} from 'react-router-redux'
 
 import createMiddleware from './middleware'
-import {getHistory} from './router'
+import getHistory from './history'
 
 export let store
 

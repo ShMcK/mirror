@@ -29,7 +29,7 @@ describe('the enhanced Router', () => {
   it('should pass history to Router', () => {
     const mirror = require('index')
     const {render, Router} = mirror
-    const {getHistory} = require('router')
+    const getHistory = require('../src/history').default
 
     const history = getHistory()
     const container = document.createElement('div')
